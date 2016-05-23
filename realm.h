@@ -3,7 +3,7 @@
 #define MAP_WIDTH 30
 #define MAP_HEIGHT 20
 #define MAX_NAME_LEN 20
-#define MAX_WEAPONS 4
+#define MAX_WEAPONS 10
 
 
 typedef unsigned char byte;

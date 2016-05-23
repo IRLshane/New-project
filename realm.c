@@ -397,7 +397,12 @@ int addWeapon(tPlayer *Player, int Weapon)
 		{	
 			printString("a bloody flail");
 			break;
-		}		
+		}
+  		case 4:
+                {
+                        printString("a steel hammer");
+                        break;
+                }		
 		default:
 			printHex(Weapon);
 	}
@@ -445,6 +450,7 @@ const char *getWeaponName(int index)
 		case 1:return "Axe";break;
 		case 2:return "Sword"; break;
 		case 3:return "Flail"; break;
+                case 4:return "Hammer"; break;
 	}
 }
 
