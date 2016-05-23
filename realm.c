@@ -28,7 +28,7 @@ const char FindTypes[]={'h','s','m','g','w'};
 // The following arrays define the bad guys and 
 // their battle properies - ordering matters!
 // Baddie types : O(gre),T(roll),D(ragon),H(ag)
-const char Baddies[]={'O','T','D','H'};
+const char Baddies[]={'O','T','D','H','K'};
 // The following is 4 sets of 4 damage types
 const byte WeaponDamage[]={10,10,5,25,10,10,5,25,10,15,5,15,5,5,2,10};
 #define ICE_SPELL_COST 10
@@ -197,6 +197,12 @@ void step(char Direction,tPlayer *Player,tRealm *Realm)
 			Consumed = doChallenge(Player,0);
 			break;
 		}
+		case 'K' :{
+			showGameMessage("A Dark Knight charges at you");
+			Consumed = doChallenge(Player,4);
+			break;
+		}
+		
 		case 'T' :{
 			showGameMessage("An evil troll challenges you");
 			Consumed = doChallenge(Player,1);
@@ -559,7 +565,7 @@ void showRealm(tRealm *Realm,tPlayer *thePlayer)
 		eputs("\r\n");
 	}
 	printString("\r\nLegend");
-	printString("(T)roll, (O)gre, (D)ragon, (H)ag, e(X)it");
+	printString("(T)roll, (O)gre, (D)ragon, (H)ag,(K)night, e(X)it");
 	printString("(w)eapon, (g)old), (m)agic, (s)trength");
 	printString("@=You");
 }
